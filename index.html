@@ -7,12 +7,32 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/webflow.css">
     <link rel="stylesheet" type="text/css" href="css/me104s.webflow.css">
     <link rel="icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/5229134442f24bc55e0000de/favicon.ico">
     <link rel="apple-touch-icon" href="https://y7v4p6k4.ssl.hwcdn.net/5229134442f24bc55e0000de/YOSO-website.png">
-    <script type="text/javascript" src="js/webflow.js" defer></script>
-  </head><body>
+
+    <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
+  <![endif]-->
+  <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
+  <![endif]-->
+
+    <script type="text/javascript" src="js/webflow.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+  </head>
+
+  <body>
+  <div id="su-wrap"> <!-- #su-wrap start -->
+  <div id="su-content"> <!-- #su-content start -->
   <div class="header">
     <div class="w-container container">
       <div class="w-row row">
@@ -27,8 +47,46 @@
       </div>
     </div>
   </div>
-  <div class="photostream">
-    <div class="opacity">
+
+  <div id="carousel-container">
+    <div class="carousel-overlay"></div>
+      <div id="photo-carousel" class="carousel slide">
+      <!-- <div class="carousel-control-panel"> -->
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#photo-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#photo-carousel" data-slide-to="1"></li>
+          <li data-target="#photo-carousel" data-slide-to="2"></li>
+          <li data-target="#photo-carousel" data-slide-to="3"></li>
+        </ol>
+        <!-- Controls -->
+        <!-- <a class="left carousel-control" href="#photo-carousel" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#photo-carousel" data-slide="next">
+          <span class="icon-next"></span>
+        </a> -->
+      <!-- </div> -->
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-image item active">
+          <img src="images/carousel-photo-0-cropped.jpg" alt="Dave and Bill">
+        </div>
+        <div class="carousel-image item">
+          <img src="images/carousel-photo-1-cropped.jpg" alt="Dave and Bill">
+        </div>
+        <div class="carousel-image item">
+          <img src="images/carousel-photo-2-cropped.jpg" alt="Dave and Bill">
+        </div>
+        <div class="carousel-image item">
+          <img src="images/carousel-photo-3-cropped.jpg" alt="Dave and Bill">
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="main-title">
       <div class="w-container textbox">
         <h1>designing your stanford</h1>
         <h4 class="layer-text">Learn how to use Design Thinking to craft<br>your awesome college experience</h4>
@@ -36,14 +94,16 @@
         <h5 class="layer-text-2">Thursdays this Fall | 3:15 - 5:05 | 2 UNITS | S/NC</h5>
       </div>
     </div>
-  </div>
+
+</div>
+
   <div class="student-nav">
     <div class="w-container student-nav-container">
       <div class="w-row student-nav-columns">
         <div class="w-col w-col-4 student-nav-column">
           <div class="student-nav-column forbox">
             <div class="w-row">
-              <div class="w-col w-col-4">
+              <!-- <div class="w-col w-col-4">
                 <h3 class="for-titles left-text for-prospective">for</h3>
               </div>
               <div class="w-col w-col-4">
@@ -51,6 +111,9 @@
               </div>
               <div class="w-col w-col-4">
                 <h3 class="for-titles right-text students-perspective">students</h3>
+              </div> -->
+              <div class="w-col w-col-12">
+                <h3 class="for-header">for <span class="for-color-prospective">prospective</span> students</h3>
               </div>
             </div>
             <div class="line"></div><a class="button forbuttons prospective" href="#page-nav-What-is-DYS" target="_self">WHAT IS DYS? </a>
@@ -107,9 +170,8 @@
       <div class="w-row">
         <div class="w-col w-col-8">
           <div class="w-container sub-section-text">
-            <h4 class="sub-section-header">Heading</h4>
-            <p class="sub-section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            <h4 class="sub-section-header faq-question">What are the basics?</h4>
+            <p class="faq-answer-hidden">Designing Your Stanford is a sophomore-only 2-unit class, graded “credit / no credit”. During Fall Quarter 2013, class will take place on Thursdays from 3:15-5:05pm in the Meyer Forum Room. We can accommodate approximately 70 students.</p>
           </div>
         </div>
         <div class="w-col w-col-4 w-clearfix">
@@ -119,9 +181,8 @@
       <div class="w-row">
         <div class="w-col w-col-8 oddball">
           <div class="w-container sub-section-text">
-            <h4 class="sub-section-header">Heading</h4>
-            <p class="sub-section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            <h4 class="sub-section-header faq-question">How much work will it be?</h4>
+            <p class="sub-section-paragraph faq-answer-hidden">Beyond the 2 hours of class every week, students can expect 1-3 hours of homework most weeks, with a slightly heavier load during weeks 6-9. There will generally be some light reading and videos, but the majority of the homework involves going out into campus and doing things (e.g. connecting with professors or other students, visiting a research center or group meeting, exploring campus resources) and then reflecting on those experiences. Reflections will include written and multimedia formats with the final goal of creating a portfolio or curated collection of experiences and reflections.</p>
           </div>
         </div>
         <div class="w-col w-col-4"></div>
@@ -129,9 +190,8 @@
       <div class="w-row">
         <div class="w-col w-col-8">
           <div class="w-container sub-section-text">
-            <h4 class="sub-section-header">Heading</h4>
-            <p class="sub-section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            <h4 class="sub-section-header faq-question">I see “design” in the course name. Do we learn Design Thinking?</h4>
+            <p class="sub-section-paragraph faq-answer-hidden">Yes! We will teach you the core concepts of Design Thinking and work through a number of exercises and applications of those ideas to your own life and college experience.</p>
           </div>
         </div>
         <div class="w-col w-col-4"></div>
@@ -139,36 +199,74 @@
       <div class="w-row">
         <div class="w-col w-col-8">
           <div class="w-container sub-section-text">
-            <h4 class="sub-section-header">Heading</h4>
-            <p class="sub-section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            <h4 class="sub-section-header faq-question">Who teaches Designing Your Stanford?</h4>
+            <p class="sub-section-paragraph faq-answer-hidden">DYS is taught by a team of four amazing instructors: Bill Burnett is Executive Director of the Design Program at Stanford and has years of Silicon Valley experience including managing the PowerBook line at Apple and running his own design Consultancy. Dave Evans has been on a mission to help others find and pursue theirs ever since his undergrad days at Stanford. Along the way, he co-founded Electronic Arts and introduced the computer mouse to the world at Apple. Eugene Korsunskiy and Kyle Williams graduated from the Stanford Design program in 2012 and joined forces with Bill and Dave to co-create and teach Designing Your Stanford.</p>
           </div>
         </div>
-        <div class="w-col w-col-4"></div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div class="w-container sub-section-text">
+            <h4 class="sub-section-header faq-question">What is Designing Your Stanford really about?</h4>
+            <p class="sub-section-paragraph faq-answer-hidden">DYS is about employing a certain kind of “how to do college” (not a “what” to do or “why” to do it). We use a process and a set of behaviors rooted in Design Thinking that, when implemented, can lead to a more authentic and satisfying college experience. Itʼs a creative authentication approach focused on personal engagement not a maximization approach focused on doing more things or an optimization approach focused on finding the right or best way to do Stanford—that is, itʼs not a destination or a goal. The DYS student recognizes that she may not yet have fully resolved the purpose and specific goals of her college education and thus seeks to balance directed focus and serendipitous exploration.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div class="w-container sub-section-text">
+            <h4 class="sub-section-header faq-question">So, what will we be doing, exactly?</h4>
+            <p class="sub-section-paragraph faq-answer-hidden">In DYS, you will go through a process of deliberately, conscientiously, and experimentally engaging your path through college, rather than simply “doing college”. In most cases, your path will be self-defined at least in part, though one could engage an entirely traditional path with a DYS mindset.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div class="w-container sub-section-text">
+            <h4 class="sub-section-header faq-question">Sounds great! How does it work?</h4>
+            <p class="sub-section-paragraph">We use a problem-based learning approach that involves 3 core practices.</p>
+            <p class="sub-section-paragraph faq-answer-hidden">Engagement: Implementing the “bias to action” mindset of Design Thinking, we go out into the world and prototype by doing things, instead of just trying to think harder to figure out what a given choice might bring. We strive to always have “skin in the game” and avoid “just going through the motions.</p>
+            <p class="sub-section-paragraph">Reflection: We synthesize experiences, ideas, and thoughts from the prototypes to guide a course of action. The DYS student learns to discern his own voice and builds awareness for his intuitive as well as analytical response and takeaways in a situation.</p>
+            <p class="sub-section-paragraph">Storytelling: We gather artifacts, collecting them into a portfolio from which we can weave a body of compelling narratives about our college experience. This serves both to gain clarity for the student herself during her college navigation, as well as to communicate her story to peers, educators, and potential employers upon completion of college.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div class="w-container sub-section-text">
+            <h4 class="sub-section-header faq-question">What do I get / whatʼs the benefit/outcome? How would senior year be different?</h4>
+            <p class="sub-section-paragraph faq-answer-hidden">An increased likelihood of ensuring that youʼre getting as much out of Stanford as youʼre putting into it. By the time you near graduation, youʼll have full access to all your college outcomes and an enhanced ability to translate them into useful stories that facilitate opportunities. Perhaps most importantly youʼll have learned how to “wayfind” through uncharted territory balancing both getting things done and exploring new discoveries. See more in the student testimonial videos below.</p>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
-    <div class="w-container section-header second-section-header">
-      <h2>here's what past students are saying</h2>
-      <div class="line long"></div>
     </div>
-    <div class="w-container video-container">
-      <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
-        <iframe src="https://www.youtube.com/embed/Hwa8b58_Fp8?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+
+    <div class="past-student-section">
+      <div class="w-container section-header second-section-header past-students-saying">
+        <h2>here's what past students are saying</h2>
+        <div class="line long"></div>
       </div>
-      <div class="w-row sub-video-section">
-        <div class="w-col w-col-4">
-          <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
-            <iframe src="https://www.youtube.com/embed/7usqcI58wVI?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
-          </div>
+      <div class="w-container video-container">
+        <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
+          <iframe src="https://www.youtube.com/embed/Hwa8b58_Fp8?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
         </div>
-        <div class="w-col w-col-4">
-          <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
-            <iframe src="https://www.youtube.com/embed/1p5fqyG92b8?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+        <div class="w-row sub-video-section">
+          <div class="w-col w-col-4 top_up">
+            <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
+              <iframe src="https://www.youtube.com/embed/7usqcI58wVI?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+            </div>
           </div>
-        </div>
-        <div class="w-col w-col-4">
-          <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
-            <iframe src="https://www.youtube.com/embed/G_sKMGDvksY?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+          <div class="w-col w-col-4 top_up">
+            <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
+              <iframe src="https://www.youtube.com/embed/1p5fqyG92b8?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+          <div class="w-col w-col-4 top_up">
+            <div class="w-embed w-video" style="padding-top: 56.20608899297424%;">
+              <iframe src="https://www.youtube.com/embed/G_sKMGDvksY?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -213,21 +311,21 @@
       <div class="w-row team-box-row box-2">
         <div class="w-col w-col-4 w-clearfix">
           <div class="team-member row-2-left">
-            <div class="chat-head unknown"></div>
+            <div class="chat-head jon"></div>
             <h4 class="team-member-name">jon kleiman</h4>
             <div class="line long short"></div><a class="you-can-book-me-address" href="#">billburnett.youcanbook.me</a><a class="team-member-email" href="#">burnett@stanford.edu</a>
           </div>
         </div>
         <div class="w-col w-col-4">
           <div class="team-member">
-            <div class="chat-head unknown"></div>
+            <div class="chat-head kristin"></div>
             <h4 class="team-member-name">kristin mayer</h4>
             <div class="line long short"></div><a class="you-can-book-me-address" href="#">billburnett.youcanbook.me</a><a class="team-member-email" href="#">burnett@stanford.edu</a>
           </div>
         </div>
         <div class="w-col w-col-4 w-clearfix">
           <div class="team-member row-2-right">
-            <div class="chat-head unknown"></div>
+            <div class="chat-head gabe"></div>
             <h4 class="team-member-name">gabe lomeli</h4>
             <div class="line long short"></div><a class="you-can-book-me-address" href="#">billburnett.youcanbook.me</a><a class="team-member-email" href="#">burnett@stanford.edu</a>
           </div>
@@ -326,5 +424,33 @@
       </div>
     </div>
   </div>
+    </div> <!-- #su-content end -->
+</div> <!-- #su-wrap end -->
+
+<!-- Global footer snippet start -->
+<div id="global-footer">
+  <div class="container">
+    <div class="row">
+      <div id="bottom-logo" class="span2">
+        <a href="http://www.stanford.edu">
+          <img src="https://www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49"/>
+        </a>
+      </div>
+      <!-- #bottom-logo end -->
+      <div id="bottom-text" class="span10">
+        <ul>
+          <li class="home"><a href="http://www.stanford.edu">SU Home</a></li>
+          <li class="maps alt"><a href="http://visit.stanford.edu/plan/maps.html">Maps &amp; Directions</a></li>
+          <li class="search-stanford"><a href="http://www.stanford.edu/search/">Search Stanford</a></li>
+          <li class="terms alt"><a href="http://www.stanford.edu/site/terms.html">Terms of Use</a></li>
+          <li class="copyright"><a href="http://www.stanford.edu/site/copyright.html">Copyright Complaints</a></li>
+        </ul>
+      </div> <!-- .bottom-text end -->
+      <div class="clear"></div>
+      <p class="copyright vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span> </span></p>
+    </div> <!-- .row end --> 
+  </div> <!-- .container end --> 
+</div> <!-- global-footer end -->
+<!-- Global footer snippet end -->
 </body>
 </html>

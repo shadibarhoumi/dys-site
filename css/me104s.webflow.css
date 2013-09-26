@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Neutraface;
+  src: url(../fonts/neutraface.ttf);
+}
+
+@font-face {
+  font-family: DIN;
+  src: url(../fonts/din-regular.otf);
+}
+
 body {
   display: block;
   margin-right: auto;
@@ -5,7 +15,7 @@ body {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: DIN, sans-serif;
   color: #333;
   font-size: 12px;
   line-height: 20px;
@@ -17,19 +27,17 @@ h1 {
   color: white;
   font-size: 60px;
   line-height: 44px;
-  font-style: italic;
-  font-weight: 700;
   text-decoration: underline;
   text-indent: 0px;
+  font-family: Neutraface;
 }
 h2 {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #666;
-  font-size: 32px;
-  line-height: 36px;
-  font-style: italic;
-  font-weight: 700;
+  font-size: 36px;
+  line-height: 38px;
+  font-family: Neutraface;
 }
 h3 {
   display: block;
@@ -38,6 +46,7 @@ h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+  font-family: Neutraface;
 }
 h4 {
   margin: 20px 0px 10px;
@@ -47,6 +56,7 @@ h4 {
   line-height: 24px;
   font-weight: 100;
   letter-spacing: 2px;
+  font-family: Neutraface;
 }
 h5 {
   margin-top: 30px;
@@ -57,12 +67,14 @@ h5 {
   line-height: 20px;
   font-weight: 700;
   letter-spacing: 1px;
+  font-family: Neutraface;
 }
 h6 {
   margin: 10px 0px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 700;
+  font-family: Neutraface;
 }
 p {
   margin-bottom: 5px;
@@ -212,7 +224,6 @@ p:hover {
   -o-transition: all 100ms ease, all 100ms linear;
   transition: all 100ms ease, all 100ms linear;
   color: #666;
-  font-weight: 700;
   text-decoration: underline;
 }
 .classes {
@@ -224,7 +235,7 @@ p:hover {
   float: right;
   color: rgba(128, 128, 128, 0.56);
 }
-.photostream {
+/*.photostream {
   height: 400px;
   border-style: solid;
   border-width: 0px;
@@ -235,6 +246,34 @@ p:hover {
   background-size: cover;
   box-shadow: black 8px 43px 42px 25px;
   opacity: 1;
+}
+*/
+.main-title {
+  position: absolute;
+  top: 68px;
+  left: 273px;
+  z-index: 300;
+}
+#carousel-container {
+  width: 100%;
+  height: 400px;
+}
+.carousel-image {
+  height: 400px;
+}
+.carousel-indicators {
+  z-index: 600;
+}
+.carousel-overlay {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  z-index: 200;
+  background-color: rgb(0, 171, 255);
+  opacity: 0.3;
+}
+.carousel-control-panel {
+  z-index: 400;
 }
 .opacity {
   height: 400px;
@@ -278,12 +317,13 @@ p:hover {
   margin-right: 0px;
   margin-left: 0px;
   padding-left: 0px;
-  border-style: solid;
-  border-width: 0px 1px 1px;
   border-color: gray;
   border-radius: 0px 0px 15px 15px;
   background-color: #fafafa;
   box-shadow: gray 0px 0px 30px 0px;
+}
+#su-content {
+  padding: 0px !important;
 }
 .for-titles {
   position: relative;
@@ -299,13 +339,11 @@ p:hover {
   float: none;
   color: #666;
   font-size: 21px;
-  font-style: italic;
-  font-weight: 700;
   text-align: center;
   text-decoration: none;
 }
 .for-titles.middle-text {
-  margin-left: -95px;
+  margin-left: -90px;
   color: #00adee;
 }
 .for-titles.middle-text.prospective {
@@ -340,6 +378,9 @@ p:hover {
   margin-bottom: 0px;
   float: none;
 }
+.layer-text, .layer-text-2 {
+  font-family: DIN;
+}
 .nav-video {
   display: block;
   width: 256px;
@@ -348,23 +389,33 @@ p:hover {
   margin-right: auto;
   margin-left: auto;
 }
+.past-students-saying {
+  margin-top: 0px !important;
+}
 .prospective-student-section {
-  height: 1425px;
+  box-shadow: black 0px 0px 40px -7px;
+  padding-top: 30px;
+  height: 1595px;
   background-color: #fff2f8;
-  box-shadow: black 29px 0px 50px -19px;
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
 }
 .current-student-section {
-  height: 1200px;
-  background-color: #e5f7fc;
   box-shadow: black 0px 0px 40px -7px;
+  padding-top: 30px;
+  height: 1230px;
+  background-color: #e5f7fc;
+}
+.past-student-section {
+  height: 850px;
+  padding-top: 30px;
 }
 .alumni-student-section {
-  height: 900px;
+  padding-top: 30px;
+  height: 970px;
   background-color: #e5f9ee;
-  box-shadow: black 0px 0px 32px -8px;
+  box-shadow: inset 0px -1px 47px -7px #000000;
 }
 .section-header {
   padding-left: 40px;
@@ -391,7 +442,7 @@ p:hover {
   margin-left: -92px;
 }
 .alumni.alumni2.diff {
-  margin-left: -97px;
+  margin-left: -93px;
   color: #00c44b;
 }
 .alumni.alumni-students {
@@ -400,10 +451,18 @@ p:hover {
 .current.current-students {
   margin-left: -109px;
 }
+/*dropdown menu headers*/
+.for-header {
+  padding-top: 12px;
+  text-align: center;
+  font-size: 20px;
+}
+.for-color-prospective {
+  color: #eb008b;
+}
 .sub-section-header {
   padding-top: 20px;
   color: #666;
-  font-style: italic;
   font-weight: 700;
   letter-spacing: 0px;
 }
@@ -465,11 +524,31 @@ p:hover {
   background-image: url(../images/kyle_headshot.jpg);
   background-size: cover;
 }
+.chat-head.jon {
+  background-image: url(../images/jon_headshot.jpg);
+  background-size: cover;
+}
+.chat-head.kristin {
+  background-image: url(../images/kristin_headshot.jpg);
+  background-size: cover;
+}
+.chat-head.gabe {
+  background-image: url(../images/gabe_headshot.png);
+  background-size: cover;
+}
 .chat-head.unknown {
   background-image: url(../images/facebook-profile-image.jpg);
   background-position: 50% 0px;
   background-size: cover;
 }
+/*faq*/
+.faq-answer {
+}
+
+.hidden {
+  display: none;
+}
+
 .team-box-row {
   padding-top: 20px;
   padding-left: 40px;
@@ -481,7 +560,6 @@ p:hover {
   padding-left: 0px;
   float: none;
   color: #666;
-  font-style: italic;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0px;
